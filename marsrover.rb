@@ -21,7 +21,7 @@ class Rover
 	
 	def read_instruction
 		input = gets.chomp
-		if input == "M"
+		if input.upcase == "M"
 			move
 		else 
 			turn(input)
@@ -67,13 +67,16 @@ end
 rover = Rover.new(0, 0, "N")
 puts "Your current position is #{rover}."
 
-	 loop do
-		puts "Enter 'M' to move forward, 'R' to turn right or 'L' to turn left."
-		rover.read_instruction
+	i = 0
+	loop do
+		i += 1
+			puts "Enter 'M' to move forward, 'R' to turn right or 'L' to turn left."
+			rover.read_instruction
+		break if i == 5
 	end
 	
 # figure out how to break loop
-#figure out how to .upcase the gets so people can use lower case or upper case
+
 
 
 
