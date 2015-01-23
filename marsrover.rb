@@ -75,7 +75,7 @@ puts "Your current position is #{rover}."
 		break if i == 5
 	end
 	
-# figure out how to break loop
+
 
 
 
